@@ -1,23 +1,31 @@
-import logo from './logo.svg';
 import './App.css';
+
+import Converter from './Components/Converter'
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>Conver$or de Moeda$</h1>
+
+      <div className="line">
+        <Converter currentyA="USD" currentyB="BRL"></Converter>
+        <Converter currentyA="BRL" currentyB="USD"></Converter>
+      </div>
+
+      <div className="line">
+        <Converter currentyA="CAD" currentyB="BRL"></Converter>
+        <Converter currentyA="BRL" currentyB="CAD"></Converter>
+      </div>
+
+      <div className="line">
+        <Converter currentyA="EUR" currentyB="BRL"></Converter>
+        <Converter currentyA="BRL" currentyB="EUR"></Converter>
+      </div>
+
+      <div className="line">
+        <Converter currentyA="GBP" currentyB="BRL"></Converter>
+        <Converter currentyA="BRL" currentyB="GBP"></Converter>
+      </div>
     </div>
   );
 }
